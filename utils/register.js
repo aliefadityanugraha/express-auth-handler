@@ -1,12 +1,5 @@
 const fs = require('fs')
-const express = require('express')
-const expressLayouts = require('express-ejs-layouts')
 const crypto = require('crypto')
-
-const app = express()
-
-app.set('view engine', 'ejs')
-app.use(expressLayouts)
 
 const getHashedPassword = (password) => {
   const sha256 = crypto.createHash('sha256');
